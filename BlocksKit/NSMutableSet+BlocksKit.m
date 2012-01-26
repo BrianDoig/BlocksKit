@@ -8,29 +8,37 @@
 @implementation NSMutableSet (BlocksKit)
 
 - (void)performSelect:(BKValidationBlock)block {
-    NSSet *list = [self objectsPassingTest:^BOOL(id obj, BOOL *stop) {
-        return block(obj);
-    }];
-    
-    [self setSet:list];
+	NSParameterAssert(block != nil);
+	
+	NSSet *list = [self objectsPassingTest:^BOOL(id obj, BOOL *stop) {
+		return block(obj);
+	}];
+	
+	[self setSet:list];
 }
 
 - (void)performReject:(BKValidationBlock)block {
-    NSSet *list = [self objectsPassingTest:^BOOL(id obj, BOOL *stop) {
-        return !block(obj);
-    }];
-    
-    [self setSet:list];    
+	NSParameterAssert(block != nil);
+	
+	
+	NSSet *list = [self objectsPassingTest:^BOOL(id obj, BOOL *stop) {
+		return !block(obj);
+	}];
+	
+	[self setSet:list];	
 }
 
 - (void)performMap:(BKTransformBlock)block {
-    NSMutableSet *new = [NSMutableSet setWithCapacity:self.count];
+	NSParameterAssert(block != nil);
+	
+	
+	NSMutableSet *new = [NSMutableSet setWithCapacity:self.count];
 
-    [self enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-        [new addObject:block(obj)];
-    }];
-    
-    [self setSet:new];
+	[self enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+		[new addObject:block(obj)];
+	}];
+	
+	[self setSet:new];
 }
 
 @end

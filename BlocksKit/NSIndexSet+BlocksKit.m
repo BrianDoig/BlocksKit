@@ -8,50 +8,68 @@
 @implementation NSIndexSet (BlocksKit)
 
 - (void)each:(BKIndexBlock)block {
-    [self enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
-        block(idx);
-    }];
+	NSParameterAssert(block != nil);
+	
+	[self enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+		block(idx);
+	}];
+}
+
+- (void)apply:(BKIndexBlock)block {
+	NSParameterAssert(block != nil);
+	
+	[self enumerateIndexesWithOptions:NSEnumerationConcurrent usingBlock:^(NSUInteger idx, BOOL *stop) {
+		block(idx);
+	}];
 }
 
 - (NSUInteger)match:(BKIndexValidationBlock)block {
-    return [self indexPassingTest:^BOOL(NSUInteger idx, BOOL *stop) {
-        return block(idx);
-    }];
+	NSParameterAssert(block != nil);
+	
+	return [self indexPassingTest:^BOOL(NSUInteger idx, BOOL *stop) {
+		return block(idx);
+	}];
 }
 
 - (NSIndexSet *)select:(BKIndexValidationBlock)block {
-    NSIndexSet *list = [self indexesPassingTest:^BOOL(NSUInteger idx, BOOL *stop) {
-        return block(idx);
-    }];
-    
-    if (!list.count)
-        return nil;
-    
-    return list;
+	NSParameterAssert(block != nil);
+	
+	NSIndexSet *list = [self indexesPassingTest:^BOOL(NSUInteger idx, BOOL *stop) {
+		return block(idx);
+	}];
+	
+	if (!list.count)
+		return nil;
+	
+	return list;
 }
 
-- (NSIndexSet *)reject:(BKIndexValidationBlock)block {    
-    NSIndexSet *list = [self indexesPassingTest:^BOOL(NSUInteger idx, BOOL *stop) {
-        return !block(idx);
-    }];
-    
-    if (!list.count)
-        return nil;
-    
-    return list;     
+- (NSIndexSet *)reject:(BKIndexValidationBlock)block {  
+	NSParameterAssert(block != nil);
+
+	NSIndexSet *list = [self indexesPassingTest:^BOOL(NSUInteger idx, BOOL *stop) {
+		return !block(idx);
+	}];
+	
+	if (!list.count)
+		return nil;
+	
+	return list;	 
 }
 
 - (NSIndexSet *)map:(BKIndexTransformBlock)block {
-    NSMutableIndexSet *list = [NSMutableIndexSet indexSet];
-    
-    [self enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
-        [list addIndex:block(idx)];
-    }];
-    
-    if (!list.count)
-        return nil;
-    
-    return list;
+	NSParameterAssert(block != nil);
+	
+	NSMutableIndexSet *list = [NSMutableIndexSet indexSet];
+	
+	[self enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+		[list addIndex:block(idx)];
+	}];
+	
+	if (!list.count)
+		return nil;
+	
+	return list;
 }
 
 @end

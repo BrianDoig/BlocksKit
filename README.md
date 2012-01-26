@@ -3,16 +3,16 @@ Overview
 
 Blocks in C and Objective-C are downright magical.  They make coding easier and potentially quicker, not to mention faster on the front end with multithreading and Grand Central Dispatch.  BlocksKit hopes to facilitate this kind of programming by removing some of the annoying - and, in some cases, impeding - limits on coding with blocks.
 
-BlocksKit is a framework andr static library for iOS 4.0+ and Mac OS X 10.6+.
+BlocksKit is a framework and static library for iOS 4.0+ and Mac OS X 10.6+.
 
 What's In The Box
 =================
 
-* Performing blocks on an `NSObject`.
+* Performing blocks on an `NSObject`, with or without delay.
 * Key-value observation (`<NSKeyValueObserving>`) with block handlers.
 * Associated objects in an Obj-C API.  (Not directly block-related.)
 * `NSArray`, `NSSet`, `NSDictionary`, and `NSIndexSet` filtering and enumeration.
-* Macros for more quickly typing out the above.
+* Filtering for mutable collections.
 * `NSInvocation` creation using a block.
 * `NSTimer` block execution.
 * Both delegation and block callbacks on `NSURLConnection`.
@@ -21,35 +21,34 @@ What's In The Box
 ### UIKit Extensions
 
 * `UIAlertView`, `UIActionSheet` with block callbacks and convenience methods.
-* Block initializers for `UIControl` and `UIBarButtonItem`
-* Block-backed initializers for `UIGestureRecognizer`.
+* Block initializers for `UIControl` and `UIBarButtonItem`.
+* Block initializers for `UIGestureRecognizer`.
 * On-touch utilities for `UIView`.
 * Block callbacks for `MFMailComposeViewController` and `MFMessageComposeViewController`.
 * Delegate alternative for `UIWebView`.
-
 
 Installation
 ============
 
 BlocksKit can be added to a project using [CocoaPods](https://github.com/alloy/cocoapods).
 
-### Release/Framework Build
+### Framework
 
 * Download a release of BlocksKit.
 * Move BlocksKit.framework to your project's folder.  Drag it from there into your project.
-* In the build settings of your target or project, change "All Linker Flags" to `-ObjC`.
-* Insert `#import <BlocksKit/BlocksKit.h>` in any header file (including your project's prefix header).
+* Add BlocksKit.framework to "Link Binary With Libraries" in your app's target. Make sure your app is linked with CoreGraphics, Foundation, MessageUI, and UIKit.
+* In the build settings of your target or project, change "Other Linker Flags" (`OTHER_LDFLAGS`) to `-ObjC -all_load`.
+* Insert `#import <BlocksKit/BlocksKit.h>` in your project's prefix header.
 * Make amazing software.
 
-### Testing/Library Build
+### Library
 
-* Clone the repository.
-* Click-and-drag the BlocksKit project into a project or workspace.
-* In the build phases of a target, add libBlocksKit.a to the "Target Dependencies" and "Link Binary with Libraries".
-* In the build settings, change "All Linker Flags" to `-ObjC` and "Header Search Paths" to `$(BUILT_PRODUCTS_DIR)/../BlocksKit/**`.
- * If you are using Xcode 4.2 with the iOS 5.0 SDK on a **non-ARC** target, set "All Linker Flags" to `-ObjC -fobjc-arc`.  
-* In any header file, insert `#import "BlocksKit/BlocksKit.h"`.  It is not recommended to insert the import statement in your project prefix, as it could break Xcode 4's Code Sense.
-
+* Download a release of BlocksKit.
+* Move libBlocksKit.a and Headers to your project's folder, preferably a subfolder like "Vendor".
+* In "Build Phases", Drag libBlocksKit.a into your target's "Link Binary With Libraries" build phase. 
+* In the build settings of your target or project, change "Other Linker Flags" to `-ObjC -all_load`. Make sure your app is linked with CoreGraphics, Foundation, MessageUI, and UIKit.
+* Change (or add) to "Header Search Paths" the relative path to BlocksKit's headers, like `$(SRCROOT)/Vendor/Headers`.
+* Insert `#import <BlocksKit/BlocksKit.h>`` in your project's prefix header.
 
 Documentation
 =============
@@ -74,6 +73,7 @@ BlocksKit takes, repurposes, fiddles with, and groups together a variety of bloc
 
 The following people (in alphabetical order) have their code lovingly enshrined in BlocksKit:
 
+* [Alexsander Akers](https://github.com/pandamonia).
 * [Michael Ash](https://github.com/mikeash).
 * [Jiva DeVoe](https://github.com/jivadevoe).
 * [Igor Evsukov](https://github.com/evsukov89).
@@ -91,4 +91,4 @@ The following people (in alphabetical order) have their code lovingly enshrined 
 * [Martin Schürrer](https://github.com/MSch).
 * [Jonathan Wight](https://github.com/schwa).
 
-Individual credits exist in the header files and, consequently, in the documentation.
+Individual credits exist in the header files and documentation.

@@ -4,31 +4,24 @@
 //
 
 #import "NSCache+BlocksKit.h"
-#import "NSObject+BlocksKit.h"
-#import "BKDelegate.h"
+#import "A2BlockDelegate+BlocksKit.h"
 
-static char *kDelegateKey = "NSCacheDelegate";
-static char *kWillEvictObjectBlockKey = "NSCacheWillEvictObject";
+#pragma mark Custom delegate
 
-#pragma mark Delegate
-
-@interface BKCacheDelegate : BKDelegate <NSCacheDelegate>
+@interface A2DynamicNSCacheDelegate : A2DynamicDelegate
 
 @end
 
-@implementation BKCacheDelegate
-
-+ (Class)targetClass {
-    return [NSCache class];
-}
+@implementation A2DynamicNSCacheDelegate
 
 - (void)cache:(NSCache *)cache willEvictObject:(id)obj {
-    if (cache.delegate && [cache.delegate respondsToSelector:@selector(cache:willEvictObject:)])
-        [cache.delegate cache:cache willEvictObject:obj];
-    
-    BKSenderBlock block = cache.willEvictBlock;
-    if (block)
-        block(obj);
+	id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(cache:willEvictObject:)])
+		[realDelegate cache:cache willEvictObject:obj];
+
+	void (^orig)(NSCache *, id) = [self blockImplementationForMethod:_cmd];
+	if (orig)
+		 orig(cache, obj);
 }
 
 @end
@@ -37,56 +30,28 @@ static char *kWillEvictObjectBlockKey = "NSCacheWillEvictObject";
 
 @implementation NSCache (BlocksKit)
 
+@dynamic willEvictBlock;
+
 + (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self swizzleSelector:@selector(delegate) withSelector:@selector(bk_delegate)];
-        [self swizzleSelector:@selector(setDelegate:) withSelector:@selector(bk_setDelegate:)];
-    });
+	@autoreleasepool {
+		[self registerDynamicDelegate];
+		[self linkCategoryBlockProperty:@"willEvictBlock" withDelegateMethod:@selector(cache:willEvictObject:)];
+	}
 }
 
 #pragma mark Methods
 
 - (id)objectForKey:(id)key withGetter:(BKReturnBlock)block {
-    id object = [self objectForKey:key];
-    if (object)
-        return object;
-    
-    if (block) {
-        object = block();
-        [self setObject:object forKey:key];
-    }
-    
-    return object;
-}
-
-#pragma mark Properties
-
-- (id)bk_delegate {
-    return [self associatedValueForKey:kDelegateKey];
-}
-
-- (void)bk_setDelegate:(id)delegate {
-    [self weaklyAssociateValue:delegate withKey:kDelegateKey];
-    [self bk_setDelegate:[BKCacheDelegate shared]];
-}
-
-- (BKSenderBlock)willEvictObjectHandler {
-    return [self willEvictBlock];
-}
-
-- (void)setWillEvictObjectHandler:(BKSenderBlock)handler {
-    [self setWillEvictBlock:handler];
-}
-
-- (BKSenderBlock)willEvictBlock {
-    BKSenderBlock block = [self associatedValueForKey:kWillEvictObjectBlockKey];
-    return BK_AUTORELEASE([block copy]);
-}
-
-- (void)setWillEvictBlock:(BKSenderBlock)handler {
-    [self bk_setDelegate:[BKCacheDelegate shared]];
-    [self associateCopyOfValue:handler withKey:kWillEvictObjectBlockKey];
+	id object = [self objectForKey:key];
+	if (object)
+		return object;
+	
+	if (block) {
+		object = block();
+		[self setObject:object forKey:key];
+	}
+	
+	return object;
 }
 
 @end

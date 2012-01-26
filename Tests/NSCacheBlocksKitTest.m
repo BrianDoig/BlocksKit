@@ -9,55 +9,33 @@
 #import "NSCacheBlocksKitTest.h"
 #import "NSTimer+BlocksKit.h"
 
-@implementation NSCacheBlocksKitTest
+#define OBJECT_COUNT 300
 
-@synthesize subject;
-
-- (BOOL)shouldRunOnMainThread {
-    // By default NO, but if you have a UI test or test dependent on running on the main thread return YES
-    return NO;
-}
-
-- (void)setUpClass {
-    // Run at start of all tests in the class
-    self.subject = [[[NSCache alloc] init] autorelease];
-}
-
-- (void)tearDownClass {
-    // Run at end of all tests in the class
-    self.subject = nil;
+@implementation NSCacheBlocksKitTest  {
+	NSCache *_subject;
+	NSInteger _total;
 }
 
 - (void)setUp {
-    total = 0;
+    _subject = [NSCache new];
 }
 
-- (void)testEvictionDelegate {
-    self.subject.willEvictBlock = ^(id obj){
-        total--;
+- (void)tearDown {
+	[_subject release];
+}
+
+- (void)cache:(NSCache *)cache willEvictObject:(id)obj {
+	_total--;
+}
+
+- (void)testDelegate {
+	_subject.delegate = self;
+	_total = 2;
+	_subject.willEvictBlock = ^(NSCache *cache, id obj){
+        _total--;
     };
-    
-    for (NSUInteger i = 0; i < 300; i++) {
-        NSString *obj = [NSString stringWithFormat:@"%i", i];
-        NSIndexPath *key = [NSIndexPath indexPathWithIndex:i];
-        [self.subject setObject:obj forKey:key];
-        total++;
-    }
-    
-    // force an eviction
-    CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)@"UISimulatedMemoryWarningNotification", NULL, NULL, true);
-    
-    [self prepare];
-    
-    [self performSelector:@selector(_succeed) withObject:nil afterDelay:4];
-    
-    [self waitForStatus:kGHUnitWaitStatusSuccess timeout:10.0];
-}
-
-- (void)_succeed {
-    GHAssertEquals(total, 2, @"The cache should have been emptied!");
-    [self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testEvictionDelegate)];
-    self.subject.willEvictBlock = nil;
+	[_subject.dynamicDelegate cache:_subject willEvictObject:nil];
+	GHAssertEquals(_total, 0, @"The delegates should have been called!");
 }
 
 @end

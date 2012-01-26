@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D28AC814AAC43E00ECB62C /* UIPopoverController+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D28AC614AAC43E00ECB62C /* UIPopoverController+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00D28AC914AAC43E00ECB62C /* UIPopoverController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D28AC714AAC43E00ECB62C /* UIPopoverController+BlocksKit.m */; };
+		00D28ACC14AAC47800ECB62C /* UIPopoverController+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D28AC614AAC43E00ECB62C /* UIPopoverController+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00D28ACD14AAC47800ECB62C /* UIPopoverController+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D28AC614AAC43E00ECB62C /* UIPopoverController+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00D28ACE14AAC48600ECB62C /* UIPopoverController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D28AC714AAC43E00ECB62C /* UIPopoverController+BlocksKit.m */; };
+		00D28ACF14AAC48700ECB62C /* UIPopoverController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D28AC714AAC43E00ECB62C /* UIPopoverController+BlocksKit.m */; };
 		600986FB13C2A2B700A8887E /* NSTimerBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 600986FA13C2A2B700A8887E /* NSTimerBlocksKitTest.m */; };
 		600986FF13C2B49D00A8887E /* NSInvocationBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 600986FE13C2B49D00A8887E /* NSInvocationBlocksKitTest.m */; };
 		6009870213C2C6E800A8887E /* NSObjectBlockObservationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6009870113C2C6E800A8887E /* NSObjectBlockObservationTest.m */; };
@@ -46,6 +52,19 @@
 		6C24280713C565660016A271 /* NSMutableDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C24280313C565650016A271 /* NSMutableDictionary+BlocksKit.m */; };
 		6C24280813C565660016A271 /* NSMutableDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C24280313C565650016A271 /* NSMutableDictionary+BlocksKit.m */; };
 		6C24280913C565660016A271 /* NSMutableDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C24280313C565650016A271 /* NSMutableDictionary+BlocksKit.m */; };
+		6C29B63714A14A830050964D /* MFMailComposeViewControllerBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C29B63614A14A830050964D /* MFMailComposeViewControllerBlocksKitTest.m */; };
+		6C29B63B14A14D970050964D /* MFMessageComposeViewControllerBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C29B63A14A14D970050964D /* MFMessageComposeViewControllerBlocksKitTest.m */; };
+		6C29B64214A150900050964D /* UIAlertViewBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C29B64114A150900050964D /* UIAlertViewBlocksKitTest.m */; };
+		6C386842149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C386840149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C386843149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C386840149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C386844149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C386840149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C386845149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C386840149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C386846149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C386840149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C386847149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C386841149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m */; };
+		6C386848149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C386841149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m */; };
+		6C386849149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C386841149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m */; };
+		6C38684A149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C386841149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m */; };
+		6C38684B149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C386841149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m */; };
 		6C3DBF911382F1BA00E6C9AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3DBF901382F1BA00E6C9AA /* Foundation.framework */; };
 		6C3DBFA01382F27300E6C9AA /* NSArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3DBF9E1382F27300E6C9AA /* NSArray+BlocksKit.m */; };
 		6C3DBFA11382F27300E6C9AA /* NSArray+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C3DBF9F1382F27300E6C9AA /* NSArray+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,16 +87,6 @@
 		6C501276143D40BB0038CE72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97E4C9913FD5AAB001BB376 /* UIKit.framework */; };
 		6C501277143D40C40038CE72 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97E4C9813FD5AAB001BB376 /* MessageUI.framework */; };
 		6C50127A143D466C0038CE72 /* NSCacheBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C501279143D466C0038CE72 /* NSCacheBlocksKitTest.m */; };
-		6C5FA857144D08B700997A2F /* BKDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5FA855144D08B600997A2F /* BKDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		6C5FA858144D08B700997A2F /* BKDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5FA855144D08B600997A2F /* BKDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		6C5FA859144D08B700997A2F /* BKDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5FA855144D08B600997A2F /* BKDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C5FA85A144D08B700997A2F /* BKDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5FA855144D08B600997A2F /* BKDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C5FA85B144D08B700997A2F /* BKDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5FA855144D08B600997A2F /* BKDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C5FA85C144D08B700997A2F /* BKDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5FA856144D08B700997A2F /* BKDelegate.m */; };
-		6C5FA85D144D08B700997A2F /* BKDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5FA856144D08B700997A2F /* BKDelegate.m */; };
-		6C5FA85E144D08B700997A2F /* BKDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5FA856144D08B700997A2F /* BKDelegate.m */; };
-		6C5FA85F144D08B700997A2F /* BKDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5FA856144D08B700997A2F /* BKDelegate.m */; };
-		6C5FA860144D08B700997A2F /* BKDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5FA856144D08B700997A2F /* BKDelegate.m */; };
 		6C6AAD8C13835D1300203261 /* UIActionSheet+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C6AAD8A13835D1300203261 /* UIActionSheet+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C6AAD8D13835D1300203261 /* UIActionSheet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AAD8B13835D1300203261 /* UIActionSheet+BlocksKit.m */; };
 		6C6AAD901383706100203261 /* NSInvocation+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C6AAD8E1383706000203261 /* NSInvocation+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -246,6 +255,31 @@
 		6CC56DFA1386A48900925FDC /* UIWebView+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC56DF71386A48900925FDC /* UIWebView+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CC56DFB1386A48900925FDC /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC56DF81386A48900925FDC /* UIWebView+BlocksKit.m */; };
 		6CC56DFC1386A48900925FDC /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC56DF81386A48900925FDC /* UIWebView+BlocksKit.m */; };
+		6CE3825A14A2653500921B80 /* A2BlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825614A2653500921B80 /* A2BlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3825B14A2653500921B80 /* A2BlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825614A2653500921B80 /* A2BlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3825C14A2653500921B80 /* A2BlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825614A2653500921B80 /* A2BlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3825D14A2653500921B80 /* A2BlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825614A2653500921B80 /* A2BlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3825E14A2653500921B80 /* A2BlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825614A2653500921B80 /* A2BlockDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3825F14A2653500921B80 /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825714A2653500921B80 /* A2BlockDelegate.m */; };
+		6CE3826014A2653500921B80 /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825714A2653500921B80 /* A2BlockDelegate.m */; };
+		6CE3826114A2653500921B80 /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825714A2653500921B80 /* A2BlockDelegate.m */; };
+		6CE3826214A2653500921B80 /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825714A2653500921B80 /* A2BlockDelegate.m */; };
+		6CE3826314A2653500921B80 /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825714A2653500921B80 /* A2BlockDelegate.m */; };
+		6CE3826414A2653500921B80 /* A2DynamicDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825814A2653500921B80 /* A2DynamicDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3826514A2653500921B80 /* A2DynamicDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825814A2653500921B80 /* A2DynamicDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3826614A2653500921B80 /* A2DynamicDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825814A2653500921B80 /* A2DynamicDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3826714A2653500921B80 /* A2DynamicDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825814A2653500921B80 /* A2DynamicDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3826814A2653500921B80 /* A2DynamicDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CE3825814A2653500921B80 /* A2DynamicDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE3826914A2653500921B80 /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825914A2653500921B80 /* A2DynamicDelegate.m */; };
+		6CE3826A14A2653500921B80 /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825914A2653500921B80 /* A2DynamicDelegate.m */; };
+		6CE3826B14A2653500921B80 /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825914A2653500921B80 /* A2DynamicDelegate.m */; };
+		6CE3826C14A2653500921B80 /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825914A2653500921B80 /* A2DynamicDelegate.m */; };
+		6CE3826D14A2653500921B80 /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE3825914A2653500921B80 /* A2DynamicDelegate.m */; };
+		6CF5E05114A18F7700921C45 /* UIWebViewBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5E05014A18F7700921C45 /* UIWebViewBlocksKitTest.m */; };
+		6CF5E05514A1964F00921C45 /* UIViewBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5E05414A1964F00921C45 /* UIViewBlocksKitTest.m */; };
+		6CF5E05814A1986300921C45 /* UIControlBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5E05714A1986300921C45 /* UIControlBlocksKitTest.m */; };
+		6CF5E05B14A19AD900921C45 /* UIBarButtonItemBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5E05A14A19AD900921C45 /* UIBarButtonItemBlocksKitTest.m */; };
+		6CF5E05E14A19EDE00921C45 /* NSURLConnectionBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5E05D14A19EDE00921C45 /* NSURLConnectionBlocksKitTest.m */; };
 		A92C9A6313F41E0A006DA96A /* NSCache+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A92C9A6113F41E0A006DA96A /* NSCache+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A92C9A6413F41E0A006DA96A /* NSCache+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C9A6213F41E0A006DA96A /* NSCache+BlocksKit.m */; };
 		A97E4C9A13FD5AAB001BB376 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97E4C9813FD5AAB001BB376 /* MessageUI.framework */; };
@@ -273,6 +307,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D28AC614AAC43E00ECB62C /* UIPopoverController+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+BlocksKit.h"; sourceTree = "<group>"; };
+		00D28AC714AAC43E00ECB62C /* UIPopoverController+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+BlocksKit.m"; sourceTree = "<group>"; };
 		600986F913C2A2B700A8887E /* NSTimerBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerBlocksKitTest.h; sourceTree = "<group>"; };
 		600986FA13C2A2B700A8887E /* NSTimerBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerBlocksKitTest.m; sourceTree = "<group>"; };
 		600986FD13C2B49D00A8887E /* NSInvocationBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSInvocationBlocksKitTest.h; sourceTree = "<group>"; };
@@ -315,6 +351,14 @@
 		6C2427FB13C565530016A271 /* NSMutableSet+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+BlocksKit.m"; sourceTree = "<group>"; };
 		6C24280213C565640016A271 /* NSMutableDictionary+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+BlocksKit.h"; sourceTree = "<group>"; };
 		6C24280313C565650016A271 /* NSMutableDictionary+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+BlocksKit.m"; sourceTree = "<group>"; };
+		6C29B63514A14A830050964D /* MFMailComposeViewControllerBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMailComposeViewControllerBlocksKitTest.h; sourceTree = "<group>"; };
+		6C29B63614A14A830050964D /* MFMailComposeViewControllerBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFMailComposeViewControllerBlocksKitTest.m; sourceTree = "<group>"; };
+		6C29B63914A14D970050964D /* MFMessageComposeViewControllerBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMessageComposeViewControllerBlocksKitTest.h; sourceTree = "<group>"; };
+		6C29B63A14A14D970050964D /* MFMessageComposeViewControllerBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFMessageComposeViewControllerBlocksKitTest.m; sourceTree = "<group>"; };
+		6C29B64014A150900050964D /* UIAlertViewBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewBlocksKitTest.h; sourceTree = "<group>"; };
+		6C29B64114A150900050964D /* UIAlertViewBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewBlocksKitTest.m; sourceTree = "<group>"; };
+		6C386840149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "A2BlockDelegate+BlocksKit.h"; sourceTree = "<group>"; };
+		6C386841149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "A2BlockDelegate+BlocksKit.m"; sourceTree = "<group>"; };
 		6C3DBF8D1382F1BA00E6C9AA /* libBlocksKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlocksKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3DBF901382F1BA00E6C9AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6C3DBF941382F1BA00E6C9AA /* BlocksKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlocksKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -338,8 +382,6 @@
 		6C3DBFE31383299D00E6C9AA /* UIAlertView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlocksKit.m"; sourceTree = "<group>"; };
 		6C501278143D466B0038CE72 /* NSCacheBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCacheBlocksKitTest.h; sourceTree = "<group>"; };
 		6C501279143D466C0038CE72 /* NSCacheBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCacheBlocksKitTest.m; sourceTree = "<group>"; };
-		6C5FA855144D08B600997A2F /* BKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDelegate.h; sourceTree = "<group>"; };
-		6C5FA856144D08B700997A2F /* BKDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDelegate.m; sourceTree = "<group>"; };
 		6C6AAD8A13835D1300203261 /* UIActionSheet+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+BlocksKit.h"; sourceTree = "<group>"; };
 		6C6AAD8B13835D1300203261 /* UIActionSheet+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+BlocksKit.m"; sourceTree = "<group>"; };
 		6C6AAD8E1383706000203261 /* NSInvocation+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+BlocksKit.h"; sourceTree = "<group>"; };
@@ -365,6 +407,20 @@
 		6CC40AA71447BBCF00E47595 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6CC56DF71386A48900925FDC /* UIWebView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+BlocksKit.h"; sourceTree = "<group>"; };
 		6CC56DF81386A48900925FDC /* UIWebView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+BlocksKit.m"; sourceTree = "<group>"; };
+		6CE3825614A2653500921B80 /* A2BlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = A2BlockDelegate.h; path = A2DynamicDelegate/A2BlockDelegate.h; sourceTree = SOURCE_ROOT; };
+		6CE3825714A2653500921B80 /* A2BlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = A2BlockDelegate.m; path = A2DynamicDelegate/A2BlockDelegate.m; sourceTree = SOURCE_ROOT; };
+		6CE3825814A2653500921B80 /* A2DynamicDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = A2DynamicDelegate.h; path = A2DynamicDelegate/A2DynamicDelegate.h; sourceTree = SOURCE_ROOT; };
+		6CE3825914A2653500921B80 /* A2DynamicDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = A2DynamicDelegate.m; path = A2DynamicDelegate/A2DynamicDelegate.m; sourceTree = SOURCE_ROOT; };
+		6CF5E04F14A18F7700921C45 /* UIWebViewBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewBlocksKitTest.h; sourceTree = "<group>"; };
+		6CF5E05014A18F7700921C45 /* UIWebViewBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewBlocksKitTest.m; sourceTree = "<group>"; };
+		6CF5E05314A1964F00921C45 /* UIViewBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewBlocksKitTest.h; sourceTree = "<group>"; };
+		6CF5E05414A1964F00921C45 /* UIViewBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewBlocksKitTest.m; sourceTree = "<group>"; };
+		6CF5E05614A1986200921C45 /* UIControlBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlBlocksKitTest.h; sourceTree = "<group>"; };
+		6CF5E05714A1986300921C45 /* UIControlBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlBlocksKitTest.m; sourceTree = "<group>"; };
+		6CF5E05914A19AD900921C45 /* UIBarButtonItemBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarButtonItemBlocksKitTest.h; sourceTree = "<group>"; };
+		6CF5E05A14A19AD900921C45 /* UIBarButtonItemBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarButtonItemBlocksKitTest.m; sourceTree = "<group>"; };
+		6CF5E05C14A19EDD00921C45 /* NSURLConnectionBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionBlocksKitTest.h; sourceTree = "<group>"; };
+		6CF5E05D14A19EDE00921C45 /* NSURLConnectionBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLConnectionBlocksKitTest.m; sourceTree = "<group>"; };
 		A92C9A6113F41E0A006DA96A /* NSCache+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCache+BlocksKit.h"; sourceTree = "<group>"; };
 		A92C9A6213F41E0A006DA96A /* NSCache+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache+BlocksKit.m"; sourceTree = "<group>"; };
 		A97E4C9813FD5AAB001BB376 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -434,11 +490,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00D28ACB14AAC45800ECB62C /* MessageUI */ = {
+			isa = PBXGroup;
+			children = (
+				A97E4C9D13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.h */,
+				A97E4C9E13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.m */,
+				A97E4CA113FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.h */,
+				A97E4CA213FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.m */,
+			);
+			name = MessageUI;
+			sourceTree = "<group>";
+		};
 		60FF000E13C023CB004A1394 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				60FF002313C02863004A1394 /* NSArrayBlocksKitTest.h */,
 				60FF002413C02863004A1394 /* NSArrayBlocksKitTest.m */,
+				6C501278143D466B0038CE72 /* NSCacheBlocksKitTest.h */,
+				6C501279143D466C0038CE72 /* NSCacheBlocksKitTest.m */,
 				604FA5F913C0A077001DB7F7 /* NSDictionaryBlocksKitTest.h */,
 				604FA5FA13C0A077001DB7F7 /* NSDictionaryBlocksKitTest.m */,
 				60F3F70C13C15F2A00B7A3E6 /* NSIndexSetBlocksKitTest.h */,
@@ -455,18 +524,32 @@
 				60EAE9D413C69D6E00415A3E /* NSMutableSetBlocksKitTest.m */,
 				605E2CF713C4013C00B490FC /* NSObjectAssociatedObjectTest.h */,
 				605E2CF813C4013C00B490FC /* NSObjectAssociatedObjectTest.m */,
-				6037A12B13C1BAAB00CB847A /* NSObjectBlocksKitTest.h */,
-				6037A12C13C1BAAB00CB847A /* NSObjectBlocksKitTest.m */,
 				6009870013C2C6E800A8887E /* NSObjectBlockObservationTest.h */,
 				6009870113C2C6E800A8887E /* NSObjectBlockObservationTest.m */,
+				6037A12B13C1BAAB00CB847A /* NSObjectBlocksKitTest.h */,
+				6037A12C13C1BAAB00CB847A /* NSObjectBlocksKitTest.m */,
 				6037A12713C1B2AE00CB847A /* NSSetBlocksKitTest.h */,
 				6037A12813C1B2AE00CB847A /* NSSetBlocksKitTest.m */,
 				600986F913C2A2B700A8887E /* NSTimerBlocksKitTest.h */,
 				600986FA13C2A2B700A8887E /* NSTimerBlocksKitTest.m */,
+				6CF5E05C14A19EDD00921C45 /* NSURLConnectionBlocksKitTest.h */,
+				6CF5E05D14A19EDE00921C45 /* NSURLConnectionBlocksKitTest.m */,
+				6C29B63514A14A830050964D /* MFMailComposeViewControllerBlocksKitTest.h */,
+				6C29B63614A14A830050964D /* MFMailComposeViewControllerBlocksKitTest.m */,
+				6C29B63914A14D970050964D /* MFMessageComposeViewControllerBlocksKitTest.h */,
+				6C29B63A14A14D970050964D /* MFMessageComposeViewControllerBlocksKitTest.m */,
 				60698AF713C55EF700E58FD8 /* UIActionSheetBlocksKitTest.h */,
 				60698AF813C55EF700E58FD8 /* UIActionSheetBlocksKitTest.m */,
-				6C501278143D466B0038CE72 /* NSCacheBlocksKitTest.h */,
-				6C501279143D466C0038CE72 /* NSCacheBlocksKitTest.m */,
+				6C29B64014A150900050964D /* UIAlertViewBlocksKitTest.h */,
+				6C29B64114A150900050964D /* UIAlertViewBlocksKitTest.m */,
+				6CF5E05914A19AD900921C45 /* UIBarButtonItemBlocksKitTest.h */,
+				6CF5E05A14A19AD900921C45 /* UIBarButtonItemBlocksKitTest.m */,
+				6CF5E05614A1986200921C45 /* UIControlBlocksKitTest.h */,
+				6CF5E05714A1986300921C45 /* UIControlBlocksKitTest.m */,
+				6CF5E05314A1964F00921C45 /* UIViewBlocksKitTest.h */,
+				6CF5E05414A1964F00921C45 /* UIViewBlocksKitTest.m */,
+				6CF5E04F14A18F7700921C45 /* UIWebViewBlocksKitTest.h */,
+				6CF5E05014A18F7700921C45 /* UIWebViewBlocksKitTest.m */,
 				60FF000F13C023CB004A1394 /* Supporting Files */,
 			);
 			path = Tests;
@@ -517,13 +600,16 @@
 		6C3DBF921382F1BA00E6C9AA /* BlocksKit */ = {
 			isa = PBXGroup;
 			children = (
-				6C3DBFB21383044600E6C9AA /* BlocksKit.h */,
+				6CE3825514A2652300921B80 /* A2DynamicDelegate */,
+				6C386840149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h */,
+				6C386841149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m */,
 				6C145416138497D40067A56E /* BKGlobals.h */,
 				6C3DBFB41383050F00E6C9AA /* BKMacros.h */,
-				6C5FA855144D08B600997A2F /* BKDelegate.h */,
-				6C5FA856144D08B700997A2F /* BKDelegate.m */,
+				6C3DBFB21383044600E6C9AA /* BlocksKit.h */,
 				6C3DBF9F1382F27300E6C9AA /* NSArray+BlocksKit.h */,
 				6C3DBF9E1382F27300E6C9AA /* NSArray+BlocksKit.m */,
+				A92C9A6113F41E0A006DA96A /* NSCache+BlocksKit.h */,
+				A92C9A6213F41E0A006DA96A /* NSCache+BlocksKit.m */,
 				6C3DBFAE1383010000E6C9AA /* NSDictionary+BlocksKit.h */,
 				6C3DBFAF1383010000E6C9AA /* NSDictionary+BlocksKit.m */,
 				6CC0901E13855E8600DDEABB /* NSIndexSet+BlocksKit.h */,
@@ -532,28 +618,27 @@
 				6C6AAD8F1383706000203261 /* NSInvocation+BlocksKit.m */,
 				6C2427F113C5653E0016A271 /* NSMutableArray+BlocksKit.h */,
 				6C2427F213C5653E0016A271 /* NSMutableArray+BlocksKit.m */,
-				6C2427FA13C565530016A271 /* NSMutableSet+BlocksKit.h */,
-				6C2427FB13C565530016A271 /* NSMutableSet+BlocksKit.m */,
 				6C24280213C565640016A271 /* NSMutableDictionary+BlocksKit.h */,
 				6C24280313C565650016A271 /* NSMutableDictionary+BlocksKit.m */,
 				6C8063B113C58D9F0018AE1E /* NSMutableIndexSet+BlocksKit.h */,
 				6C8063B213C58DA00018AE1E /* NSMutableIndexSet+BlocksKit.m */,
+				6C2427FA13C565530016A271 /* NSMutableSet+BlocksKit.h */,
+				6C2427FB13C565530016A271 /* NSMutableSet+BlocksKit.m */,
 				6C3DBFD2138318C900E6C9AA /* NSObject+AssociatedObjects.h */,
 				6C3DBFD3138318CA00E6C9AA /* NSObject+AssociatedObjects.m */,
-				6C3DBFB61383085800E6C9AA /* NSObject+BlocksKit.h */,
-				6C3DBFB71383085800E6C9AA /* NSObject+BlocksKit.m */,
 				6C3DBFDA1383202400E6C9AA /* NSObject+BlockObservation.h */,
 				6C3DBFDB1383202400E6C9AA /* NSObject+BlockObservation.m */,
+				6C3DBFB61383085800E6C9AA /* NSObject+BlocksKit.h */,
+				6C3DBFB71383085800E6C9AA /* NSObject+BlocksKit.m */,
 				6C3DBFA91382FD3B00E6C9AA /* NSSet+BlocksKit.h */,
 				6C3DBFAA1382FD3B00E6C9AA /* NSSet+BlocksKit.m */,
 				6C3DBFDE1383265900E6C9AA /* NSTimer+BlocksKit.h */,
 				6C3DBFDF1383265A00E6C9AA /* NSTimer+BlocksKit.m */,
 				A99DD88413D316FF00F2308F /* NSURLConnection+BlocksKit.h */,
 				A99DD88513D3170100F2308F /* NSURLConnection+BlocksKit.m */,
-				A92C9A6113F41E0A006DA96A /* NSCache+BlocksKit.h */,
-				A92C9A6213F41E0A006DA96A /* NSCache+BlocksKit.m */,
-				6CC08FC91385553B00DDEABB /* UIKit */,
 				6C3DBF931382F1BA00E6C9AA /* Supporting Files */,
+				00D28ACB14AAC45800ECB62C /* MessageUI */,
+				6CC08FC91385553B00DDEABB /* UIKit */,
 			);
 			path = BlocksKit;
 			sourceTree = "<group>";
@@ -570,20 +655,18 @@
 		6CC08FC91385553B00DDEABB /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A97E4C9D13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.h */,
-				A97E4C9E13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.m */,
-				A97E4CA113FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.h */,
-				A97E4CA213FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.m */,
-				6C3DBFE21383299C00E6C9AA /* UIAlertView+BlocksKit.h */,
-				6C3DBFE31383299D00E6C9AA /* UIAlertView+BlocksKit.m */,
 				6C6AAD8A13835D1300203261 /* UIActionSheet+BlocksKit.h */,
 				6C6AAD8B13835D1300203261 /* UIActionSheet+BlocksKit.m */,
+				6C3DBFE21383299C00E6C9AA /* UIAlertView+BlocksKit.h */,
+				6C3DBFE31383299D00E6C9AA /* UIAlertView+BlocksKit.m */,
 				6C6AAD96138372C300203261 /* UIBarButtonItem+BlocksKit.h */,
 				6C6AAD97138372C400203261 /* UIBarButtonItem+BlocksKit.m */,
 				6C6AAD92138372B400203261 /* UIControl+BlocksKit.h */,
 				6C6AAD93138372B400203261 /* UIControl+BlocksKit.m */,
 				6C6AAD9A138372D200203261 /* UIGestureRecognizer+BlocksKit.h */,
 				6C6AAD9B138372D200203261 /* UIGestureRecognizer+BlocksKit.m */,
+				00D28AC614AAC43E00ECB62C /* UIPopoverController+BlocksKit.h */,
+				00D28AC714AAC43E00ECB62C /* UIPopoverController+BlocksKit.m */,
 				6C6AAD9E138372E300203261 /* UIView+BlocksKit.h */,
 				6C6AAD9F138372E300203261 /* UIView+BlocksKit.m */,
 				6CC56DF71386A48900925FDC /* UIWebView+BlocksKit.h */,
@@ -595,12 +678,12 @@
 		6CC08FD11385555D00DDEABB /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6C3DBF901382F1BA00E6C9AA /* Foundation.framework */,
 				60FF000C13C023CB004A1394 /* CoreGraphics.framework */,
-				6C3DBF8D1382F1BA00E6C9AA /* libBlocksKit.a */,
-				A97E4C9913FD5AAB001BB376 /* UIKit.framework */,
-				A97E4C9813FD5AAB001BB376 /* MessageUI.framework */,
+				6C3DBF901382F1BA00E6C9AA /* Foundation.framework */,
 				60FF002113C024E8004A1394 /* GHUnitIOS.framework */,
+				A97E4C9813FD5AAB001BB376 /* MessageUI.framework */,
+				A97E4C9913FD5AAB001BB376 /* UIKit.framework */,
+				6C3DBF8D1382F1BA00E6C9AA /* libBlocksKit.a */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -608,10 +691,21 @@
 		6CC40AAB1447BCD200E47595 /* Mac OS X */ = {
 			isa = PBXGroup;
 			children = (
-				6CC40AA71447BBCF00E47595 /* Foundation.framework */,
 				6CC40A931447BB5F00E47595 /* Cocoa.framework */,
+				6CC40AA71447BBCF00E47595 /* Foundation.framework */,
 			);
 			name = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		6CE3825514A2652300921B80 /* A2DynamicDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CE3825614A2653500921B80 /* A2BlockDelegate.h */,
+				6CE3825714A2653500921B80 /* A2BlockDelegate.m */,
+				6CE3825814A2653500921B80 /* A2DynamicDelegate.h */,
+				6CE3825914A2653500921B80 /* A2DynamicDelegate.m */,
+			);
+			name = A2DynamicDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -648,7 +742,10 @@
 				A92C9A6313F41E0A006DA96A /* NSCache+BlocksKit.h in Headers */,
 				A97E4C9F13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.h in Headers */,
 				A97E4CA313FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.h in Headers */,
-				6C5FA859144D08B700997A2F /* BKDelegate.h in Headers */,
+				6C386844149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */,
+				6CE3825C14A2653500921B80 /* A2BlockDelegate.h in Headers */,
+				6CE3826614A2653500921B80 /* A2DynamicDelegate.h in Headers */,
+				00D28ACC14AAC47800ECB62C /* UIPopoverController+BlocksKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +771,9 @@
 				6C8063B413C58DA00018AE1E /* NSMutableIndexSet+BlocksKit.h in Headers */,
 				A99DD88713D3170200F2308F /* NSURLConnection+BlocksKit.h in Headers */,
 				6C79A15413F5AEE800CD8064 /* NSCache+BlocksKit.h in Headers */,
-				6C5FA85A144D08B700997A2F /* BKDelegate.h in Headers */,
+				6C386845149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */,
+				6CE3825D14A2653500921B80 /* A2BlockDelegate.h in Headers */,
+				6CE3826714A2653500921B80 /* A2DynamicDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +806,10 @@
 				6C8063B513C58DA00018AE1E /* NSMutableIndexSet+BlocksKit.h in Headers */,
 				A99DD88813D3170200F2308F /* NSURLConnection+BlocksKit.h in Headers */,
 				6C79A15713F5AEF300CD8064 /* NSCache+BlocksKit.h in Headers */,
-				6C5FA85B144D08B700997A2F /* BKDelegate.h in Headers */,
+				6C386846149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */,
+				6CE3825E14A2653500921B80 /* A2BlockDelegate.h in Headers */,
+				6CE3826814A2653500921B80 /* A2DynamicDelegate.h in Headers */,
+				00D28ACD14AAC47800ECB62C /* UIPopoverController+BlocksKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +844,10 @@
 				6CC40A681447B73B00E47595 /* UIGestureRecognizer+BlocksKit.h in Headers */,
 				6CC40A691447B73B00E47595 /* UIView+BlocksKit.h in Headers */,
 				6CC40A6A1447B73B00E47595 /* UIWebView+BlocksKit.h in Headers */,
-				6C5FA857144D08B700997A2F /* BKDelegate.h in Headers */,
+				6C386842149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */,
+				6CE3825A14A2653500921B80 /* A2BlockDelegate.h in Headers */,
+				6CE3826414A2653500921B80 /* A2DynamicDelegate.h in Headers */,
+				00D28AC814AAC43E00ECB62C /* UIPopoverController+BlocksKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,7 +873,9 @@
 				6CC40AA41447BBC200E47595 /* NSTimer+BlocksKit.h in Headers */,
 				6CC40AA51447BBC200E47595 /* NSURLConnection+BlocksKit.h in Headers */,
 				6CC40AA61447BBC200E47595 /* NSCache+BlocksKit.h in Headers */,
-				6C5FA858144D08B700997A2F /* BKDelegate.h in Headers */,
+				6C386843149D8F3600BD716C /* A2BlockDelegate+BlocksKit.h in Headers */,
+				6CE3825B14A2653500921B80 /* A2BlockDelegate.h in Headers */,
+				6CE3826514A2653500921B80 /* A2DynamicDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,7 +995,7 @@
 		6C3DBF841382F1BA00E6C9AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Dizzy Technology";
 			};
 			buildConfigurationList = 6C3DBF871382F1BA00E6C9AA /* Build configuration list for PBXProject "BlocksKit" */;
@@ -950,7 +1057,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n# Nothing for the slave script to do\nexit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nUFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nUFW_OTHER_PLATFORM=iphonesimulator\nelse\nUFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\nUFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\necho \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n[[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n[[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n[[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n[[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n[[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\nexit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\necho \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
 		};
 		6CC40A281447B58600E47595 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -963,7 +1070,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sf A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sf A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sf Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sf Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sf Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sf Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sf \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sf \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sf \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n# Nothing for the slave script to do\nexit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n    eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\necho \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\nexit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nUFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nUFW_OTHER_PLATFORM=iphonesimulator\nelse\nUFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\nUFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\necho \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\nexit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sf A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sf A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sf Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sf Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sf Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sf Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sf \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sf \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sf \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\nif [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\nthen\necho ln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\nln -sf \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\nfi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -988,6 +1095,14 @@
 				60EAE9D213C69D4B00415A3E /* NSMutableIndexSetBlocksKitTest.m in Sources */,
 				60EAE9D513C69D6E00415A3E /* NSMutableSetBlocksKitTest.m in Sources */,
 				6C50127A143D466C0038CE72 /* NSCacheBlocksKitTest.m in Sources */,
+				6C29B63714A14A830050964D /* MFMailComposeViewControllerBlocksKitTest.m in Sources */,
+				6C29B63B14A14D970050964D /* MFMessageComposeViewControllerBlocksKitTest.m in Sources */,
+				6C29B64214A150900050964D /* UIAlertViewBlocksKitTest.m in Sources */,
+				6CF5E05114A18F7700921C45 /* UIWebViewBlocksKitTest.m in Sources */,
+				6CF5E05514A1964F00921C45 /* UIViewBlocksKitTest.m in Sources */,
+				6CF5E05814A1986300921C45 /* UIControlBlocksKitTest.m in Sources */,
+				6CF5E05B14A19AD900921C45 /* UIBarButtonItemBlocksKitTest.m in Sources */,
+				6CF5E05E14A19EDE00921C45 /* NSURLConnectionBlocksKitTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,7 +1134,10 @@
 				A92C9A6413F41E0A006DA96A /* NSCache+BlocksKit.m in Sources */,
 				A97E4CA013FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.m in Sources */,
 				A97E4CA413FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.m in Sources */,
-				6C5FA85E144D08B700997A2F /* BKDelegate.m in Sources */,
+				6C386849149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */,
+				6CE3826114A2653500921B80 /* A2BlockDelegate.m in Sources */,
+				6CE3826B14A2653500921B80 /* A2DynamicDelegate.m in Sources */,
+				00D28ACE14AAC48600ECB62C /* UIPopoverController+BlocksKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,7 +1160,9 @@
 				6C24280813C565660016A271 /* NSMutableDictionary+BlocksKit.m in Sources */,
 				6C8063B713C58DA00018AE1E /* NSMutableIndexSet+BlocksKit.m in Sources */,
 				A99DD88A13D3170200F2308F /* NSURLConnection+BlocksKit.m in Sources */,
-				6C5FA85F144D08B700997A2F /* BKDelegate.m in Sources */,
+				6C38684A149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */,
+				6CE3826214A2653500921B80 /* A2BlockDelegate.m in Sources */,
+				6CE3826C14A2653500921B80 /* A2DynamicDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,7 +1192,10 @@
 				6C24280913C565660016A271 /* NSMutableDictionary+BlocksKit.m in Sources */,
 				6C8063B813C58DA00018AE1E /* NSMutableIndexSet+BlocksKit.m in Sources */,
 				A99DD88B13D3170200F2308F /* NSURLConnection+BlocksKit.m in Sources */,
-				6C5FA860144D08B700997A2F /* BKDelegate.m in Sources */,
+				6C38684B149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */,
+				6CE3826314A2653500921B80 /* A2BlockDelegate.m in Sources */,
+				6CE3826D14A2653500921B80 /* A2DynamicDelegate.m in Sources */,
+				00D28ACF14AAC48700ECB62C /* UIPopoverController+BlocksKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,7 +1227,10 @@
 				6CC40A4B1447B67A00E47595 /* UIView+BlocksKit.m in Sources */,
 				6CC40A4C1447B67A00E47595 /* UIWebView+BlocksKit.m in Sources */,
 				6CC40A351447B67000E47595 /* UIGestureRecognizer+BlocksKit.m in Sources */,
-				6C5FA85C144D08B700997A2F /* BKDelegate.m in Sources */,
+				6C386847149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */,
+				6CE3825F14A2653500921B80 /* A2BlockDelegate.m in Sources */,
+				6CE3826914A2653500921B80 /* A2DynamicDelegate.m in Sources */,
+				00D28AC914AAC43E00ECB62C /* UIPopoverController+BlocksKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1127,7 +1253,9 @@
 				6CC40A901447BB2900E47595 /* NSTimer+BlocksKit.m in Sources */,
 				6CC40A911447BB2900E47595 /* NSURLConnection+BlocksKit.m in Sources */,
 				6CC40A921447BB2900E47595 /* NSCache+BlocksKit.m in Sources */,
-				6C5FA85D144D08B700997A2F /* BKDelegate.m in Sources */,
+				6C386848149D8F3600BD716C /* A2BlockDelegate+BlocksKit.m in Sources */,
+				6CE3826014A2653500921B80 /* A2BlockDelegate.m in Sources */,
+				6CE3826A14A2653500921B80 /* A2DynamicDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,6 +1287,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1167,9 +1296,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -1185,15 +1312,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1209,7 +1335,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				"ARCHS[sdk=macosx*]" = x86_64;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1224,6 +1355,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1233,7 +1365,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				"ARCHS[sdk=macosx*]" = x86_64;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1241,6 +1378,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1250,11 +1388,7 @@
 		6C3DBF981382F1BA00E6C9AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				OTHER_LDFLAGS = "-ObjC";
+				DEAD_CODE_STRIPPING = NO;
 				PRIVATE_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
 				PRODUCT_NAME = BlocksKit;
 				PUBLIC_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
@@ -1265,11 +1399,7 @@
 		6C3DBF991382F1BA00E6C9AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				OTHER_LDFLAGS = "-ObjC";
+				DEAD_CODE_STRIPPING = NO;
 				PRIVATE_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
 				PRODUCT_NAME = BlocksKit;
 				PUBLIC_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
@@ -1280,7 +1410,6 @@
 		6CC08FD91385555D00DDEABB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1288,11 +1417,7 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRIVATE_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
 				PRODUCT_NAME = BlocksKit;
@@ -1304,7 +1429,6 @@
 		6CC08FDA1385555D00DDEABB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1313,11 +1437,7 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRIVATE_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
 				PRODUCT_NAME = BlocksKit;
 				PUBLIC_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
@@ -1328,7 +1448,6 @@
 		6CC0900713855CAE00DDEABB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1336,16 +1455,11 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					CHAMELEON,
 					"DEBUG=1",
-					"$(inherited)",
 				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRIVATE_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
 				PRODUCT_NAME = BlocksKit_Chameleon;
@@ -1357,7 +1471,6 @@
 		6CC0900813855CAE00DDEABB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1366,11 +1479,8 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_PREPROCESSOR_DEFINITIONS = CHAMELEON;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRIVATE_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
 				PRODUCT_NAME = BlocksKit_Chameleon;
 				PUBLIC_HEADERS_FOLDER_PATH = "../$(PRODUCT_NAME)/$(PRODUCT_NAME)";
@@ -1381,28 +1491,21 @@
 		6CC40A331447B58600E47595 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv6,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
-				CLANG_ENABLE_OBJC_ARC = NO;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
-				DEPLOYMENT_POSTPROCESSING = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = "BlocksKit/BlocksKit-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BlocksKit;
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1411,28 +1514,21 @@
 		6CC40A341447B58600E47595 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv6,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
-				CLANG_ENABLE_OBJC_ARC = NO;
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
-				DEPLOYMENT_POSTPROCESSING = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = "BlocksKit/BlocksKit-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BlocksKit;
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1441,8 +1537,6 @@
 		6CC40A821447BB1400E47595 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1450,11 +1544,8 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "BlocksKit/BlocksKit-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = BlocksKit;
 				SDKROOT = macosx;
@@ -1465,8 +1556,6 @@
 		6CC40A831447BB1400E47595 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1475,11 +1564,8 @@
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "BlocksKit/BlocksKit-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = BlocksKit;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
