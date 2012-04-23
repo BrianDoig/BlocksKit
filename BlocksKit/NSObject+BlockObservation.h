@@ -59,7 +59,7 @@
  observation with removeObserverWithBlockToken:.
  @see addObserverForKeyPath:identifier:options:task:
  */
-- (void)addObserverForKeyPath:(NSString *)keyPath identifier:(NSString *)token task:(BKObservationBlock)task DEPRECATED_ATTRIBUTE_M("Replaced with addObserverForKeyPath:identifier:options:task:");
+- (void)addObserverForKeyPath:(NSString *)keyPath identifier:(NSString *)token task:(BKObservationBlock)task;
 
 /** Adds an observer to an object conforming to NSKeyValueObserving.
 
@@ -76,7 +76,7 @@
  observation with removeObserverWithBlockToken:.
  @see addObserverForKeyPath:task:
 */
-- (NSString *)addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options task:(BKObservationBlock)task DEPRECATED_ATTRIBUTE_M("Use addObserverForKeyPath:task:");
+- (NSString *)addObserverForKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options task:(BKObservationBlock)task;
 
 /** Adds an observer to an object conforming to NSKeyValueObserving.
  
