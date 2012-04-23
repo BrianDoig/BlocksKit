@@ -26,7 +26,12 @@ static id bk_blockDelegateGetter(id self, SEL _cmd);
 static void bk_blockPropertySetter(id self, SEL _cmd, id block);
 
 // Forward Declarations
-extern IMP imp_implementationWithBlock(void *block) __attribute__((weak_import));
+#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_7
+extern IMP imp_implementationWithBlock(id block) AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER;
+#else
+extern IMP imp_implementationWithBlock(void *block) AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER;
+#endif
+
 extern char *a2_property_copyAttributeValue(objc_property_t property, const char *name);
 
 // Helpers
@@ -64,10 +69,6 @@ static SEL bk_setterForProperty(Class cls, NSString *propertyName);
 - (id) realDelegate
 {
 	return [self associatedValueForKey: &BKRealDelegateKey];
-}
-- (void) setRealDelegate: (id) rd
-{
-	[self associateValue:rd withKey:&BKRealDelegateKey];
 }
 
 @end
@@ -156,8 +157,13 @@ static SEL bk_setterForProperty(Class cls, NSString *propertyName);
 					[self performSelector:a2_setter withObject:dynamicDelegate];
 			}
 			
-			if ([delegate isEqual: self] || [delegate isEqual: dynamicDelegate]) delegate = nil;
-			dynamicDelegate.realDelegate = delegate;
+			if ([delegate isEqual: self]) {
+				[dynamicDelegate weaklyAssociateValue: delegate withKey: &BKRealDelegateKey];
+				return;
+			}
+			
+			if ([delegate isEqual: dynamicDelegate]) delegate = nil;
+			[dynamicDelegate associateValue: delegate withKey: &BKRealDelegateKey];
 		} copy] autorelease]);
 		
 		getterImplementation = imp_implementationWithBlock((__bridge void *) [[^id(NSObject *self) {
@@ -267,8 +273,13 @@ static void bk_blockDelegateSetter(NSObject *self, SEL _cmd, id delegate)
 			[self performSelector:a2_setter withObject:dynamicDelegate];
 	}
 	
-	if ([delegate isEqual: self] || [delegate isEqual: dynamicDelegate]) delegate = nil;
-	dynamicDelegate.realDelegate = delegate;
+	if ([delegate isEqual: self]) {
+		[dynamicDelegate weaklyAssociateValue: delegate withKey: &BKRealDelegateKey];
+		return;
+	}
+	
+	if ([delegate isEqual: dynamicDelegate]) delegate = nil;
+	[dynamicDelegate associateValue: delegate withKey: &BKRealDelegateKey];
 }
 
 // Block Delegate Getter (Swizzled)
