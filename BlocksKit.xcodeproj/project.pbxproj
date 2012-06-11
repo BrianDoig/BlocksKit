@@ -892,7 +892,7 @@
 		6C3DBF841382F1BA00E6C9AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Dizzy Technology";
 			};
 			buildConfigurationList = 6C3DBF871382F1BA00E6C9AA /* Build configuration list for PBXProject "BlocksKit" */;
@@ -1205,6 +1205,7 @@
 				);
 				"ARCHS[sdk=iphonesimulator*]" = i386;
 				"ARCHS[sdk=macosx*]" = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1239,6 +1240,7 @@
 				);
 				"ARCHS[sdk=iphonesimulator*]" = i386;
 				"ARCHS[sdk=macosx*]" = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
