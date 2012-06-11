@@ -26,10 +26,12 @@ static id bk_blockDelegateGetter(id self, SEL _cmd);
 static void bk_blockPropertySetter(id self, SEL _cmd, id block);
 
 // Forward Declarations
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_7 || __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_5_0
+#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_7 
 extern IMP imp_implementationWithBlock(id block) AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER;
 #else
+#if __MAC_OS_X_VERSION_MAX_ALLOWED > __MAC_10_7  // Declared by OS in after 10.7
 extern IMP imp_implementationWithBlock(void *block) AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER;
+#endif
 #endif
 
 extern char *a2_property_copyAttributeValue(objc_property_t property, const char *name);
