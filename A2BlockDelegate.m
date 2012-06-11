@@ -41,7 +41,7 @@ extern char *property_copyAttributeValue(objc_property_t property, const char *a
 #if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_7
 extern IMP imp_implementationWithBlock(id block) AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER;
 #else
-extern IMP imp_implementationWithBlock(void *block) AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER;
+//extern IMP imp_implementationWithBlock(void *block) AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER;
 #endif
 
 @interface NSObject ()
@@ -136,6 +136,7 @@ extern IMP imp_implementationWithBlock(void *block) AVAILABLE_MAC_OS_X_VERSION_1
 			if (sel_isEqual(selector, accessor))
 			{
 				propertyName = [NSString stringWithUTF8String: property_getName(property)];
+				free(accessorName);
 				break; // from for-loop
 			}
 			
