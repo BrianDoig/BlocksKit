@@ -8,6 +8,12 @@
 #import "A2BlockDelegate+BlocksKit.h"
 #import <objc/runtime.h>
 
+@interface A2DynamicDelegate ()
+
++ (Protocol *) protocol;
+
+@end
+
 #pragma mark Private
 
 static char kResponseDataKey;
@@ -57,9 +63,11 @@ static char kResponseLengthKey;
 - (void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite;
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace;
 @end
 
-@interface A2DynamicBKURLConnectionInformalDelegate : A2DynamicDelegate <BKURLConnectionInformalDelegate>
+@interface A2DynamicBKURLConnectionInformalDelegate : A2DynamicDelegate
 
 @end
 
@@ -136,21 +144,71 @@ static char kResponseLengthKey;
 	void (^block)(NSURLConnection *, NSError *) = [self blockImplementationForMethod:_cmd];
 	if (block)
 		block(connection, error);
+}- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    id realDelegate = self.realDelegate;
+    if (realDelegate && [realDelegate respondsToSelector:@selector(connection:didReceiveAuthenticationChallenge:)])
+        [realDelegate connection:connection didReceiveAuthenticationChallenge:challenge];
+}
+
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+    id realDelegate = self.realDelegate;
+    if (realDelegate && [realDelegate respondsToSelector:@selector(connection:canAuthenticateAgainstProtectionSpace:)])
+        return [realDelegate connection:connection canAuthenticateAgainstProtectionSpace:protectionSpace];
+    
+    return NO;
 }
 
 @end
 
 #pragma mark - NSURLConnectionDelegate - iOS 5.0 & Lion support
 
-#ifdef NSURLConnectionDataDelegate
-@interface A2DynamicNSURLConnectionDelegate : A2DynamicDelegate <NSURLConnectionDataDelegate>
-#else
-@interface A2DynamicNSURLConnectionDelegate : A2DynamicDelegate <NSURLConnectionDelegate>
-#endif
+@interface A2DynamicNSURLConnectionDelegate : A2DynamicDelegate
 
 @end
 
 @implementation A2DynamicNSURLConnectionDelegate
+
++ (BOOL)conformsToProtocol:(Protocol *)protocol {
+    Protocol *dataDelegateProtocol = objc_getProtocol("NSURLConnectionDataDelegate");
+    return (protocol_isEqual(protocol, dataDelegateProtocol) || protocol_isEqual(protocol, [self protocol]) || [super conformsToProtocol:protocol]);
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(connection:didFailWithError:)])
+		[realDelegate connection:connection didFailWithError:error];
+	
+	connection.bk_responseLength = 0;
+	[connection.bk_responseData setLength:0];
+	
+	void (^block)(NSURLConnection *, NSError *) = [self blockImplementationForMethod:_cmd];
+	if (block)
+		block(connection, error);
+}
+
+- (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection {
+	id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(connectionShouldUseCredentialStorage:)])
+		return [realDelegate connectionShouldUseCredentialStorage: connection];
+    
+    return YES;
+}
+
+- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+	id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(connection:willSendRequestForAuthenticationChallenge:)])
+		[realDelegate connection: connection willSendRequestForAuthenticationChallenge: challenge];
+}
+
+#pragma mark - NSURLConnectionDataDelegate
+
+- (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)response {
+	id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(connection:willSendRequest:redirectResponse:)])
+		return [realDelegate connection: connection willSendRequest: request redirectResponse: response];
+
+    return request;
+}
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
 	id realDelegate = self.realDelegate;
@@ -191,6 +249,14 @@ static char kResponseLengthKey;
 	[responseData appendData:data];
 }
 
+- (NSInputStream *)connection:(NSURLConnection *)connection needNewBodyStream:(NSURLRequest *)request {
+    id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(connection:needNewBodyStream:)])
+		return [realDelegate connection: connection needNewBodyStream: request];
+
+    return nil;
+}
+
 - (void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite {
 	id realDelegate = self.realDelegate;
 	if (realDelegate && [realDelegate respondsToSelector:@selector(connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:)])
@@ -199,6 +265,14 @@ static char kResponseLengthKey;
 	void (^block)(CGFloat) = connection.uploadBlock;
 	if (block)
 		block((CGFloat)totalBytesWritten/(CGFloat)totalBytesExpectedToWrite);
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
+    id realDelegate = self.realDelegate;
+	if (realDelegate && [realDelegate respondsToSelector:@selector(connection:willCacheResponse:)])
+		return [realDelegate connection: connection willCacheResponse: cachedResponse];
+    
+    return nil;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -214,17 +288,20 @@ static char kResponseLengthKey;
 		block(connection, connection.bk_response, connection.bk_responseData);
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	id realDelegate = self.realDelegate;
-	if (realDelegate && [realDelegate respondsToSelector:@selector(connection:didFailWithError:)])
-		[realDelegate connection:connection didFailWithError:error];
-	
-	connection.bk_responseLength = 0;
-	[connection.bk_responseData setLength:0];
-	
-	void (^block)(NSURLConnection *, NSError *) = [self blockImplementationForMethod:_cmd];
-	if (block)
-		block(connection, error);
+#pragma mark - Deprecated iOS 4.x authentication methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    id realDelegate = self.realDelegate;
+    if (realDelegate && [realDelegate respondsToSelector:@selector(connection:didReceiveAuthenticationChallenge:)])
+        [realDelegate connection:connection didReceiveAuthenticationChallenge:challenge];
+}
+
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+    id realDelegate = self.realDelegate;
+    if (realDelegate && [realDelegate respondsToSelector:@selector(connection:canAuthenticateAgainstProtectionSpace:)])
+        return [realDelegate connection:connection canAuthenticateAgainstProtectionSpace:protectionSpace];
+    
+    return NO;
 }
 
 @end
@@ -269,7 +346,8 @@ static NSString *const kDownloadBlockKey = @"NSURLConnectionDidRecieveData";
 	Protocol *delegateProtocol = objc_getProtocol("NSURLConnectionDelegate");
 	if (!delegateProtocol)
 		delegateProtocol = @protocol(BKURLConnectionInformalDelegate);
-	if ((self = [self initWithRequest:request delegate:[self dynamicDelegateForProtocol:delegateProtocol] startImmediately:NO]))
+    id dd = [self dynamicDelegateForProtocol:delegateProtocol];
+	if ((self = [self initWithRequest:request delegate:dd startImmediately:NO]))
 		self.successBlock = block;
 	return self;
 }
@@ -287,7 +365,7 @@ static NSString *const kDownloadBlockKey = @"NSURLConnectionDidRecieveData";
 
 - (void)setSuccessBlock:(void(^)(NSURLConnection *, NSURLResponse *, NSData *))block {
 	if (block)
-		[[self.dynamicDelegate handlers] setObject:block forKey:kSuccessBlockKey];
+		[[self.dynamicDelegate handlers] setObject:[[block copy] autorelease] forKey:kSuccessBlockKey];
 	else
 		[[self.dynamicDelegate handlers] removeObjectForKey:kSuccessBlockKey];
 	
@@ -299,7 +377,7 @@ static NSString *const kDownloadBlockKey = @"NSURLConnectionDidRecieveData";
 
 - (void)setUploadBlock:(void(^)(CGFloat))block {
 	if (block)
-		[[self.dynamicDelegate handlers] setObject:block forKey:kUploadBlockKey];
+		[[self.dynamicDelegate handlers] setObject:[[block copy] autorelease] forKey:kUploadBlockKey];
 	else
 		[[self.dynamicDelegate handlers] removeObjectForKey:kUploadBlockKey];
 }
@@ -310,9 +388,11 @@ static NSString *const kDownloadBlockKey = @"NSURLConnectionDidRecieveData";
 
 - (void)setDownloadBlock:(void(^)(CGFloat))block {
 	if (block)
-		[[self.dynamicDelegate handlers] setObject:block forKey:kDownloadBlockKey];
+		[[self.dynamicDelegate handlers] setObject:[[block copy] autorelease] forKey:kDownloadBlockKey];
 	else
 		[[self.dynamicDelegate handlers] removeObjectForKey:kDownloadBlockKey];
 }
 
 @end
+
+BK_MAKE_CATEGORY_LOADABLE(NSURLConnection_BlocksKit)

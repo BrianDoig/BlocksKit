@@ -9,7 +9,7 @@
 
 #pragma mark - Delegate
 
-@interface A2DynamicUIPopoverControllerDelegate : A2DynamicDelegate <UIPopoverControllerDelegate>
+@interface A2DynamicUIPopoverControllerDelegate : A2DynamicDelegate
 
 @end
 
@@ -58,3 +58,5 @@
 }
 
 @end
+
+BK_MAKE_CATEGORY_LOADABLE(UIPopoverController_BlocksKit)

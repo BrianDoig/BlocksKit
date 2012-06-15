@@ -81,4 +81,29 @@
 	return [result autorelease];
 }
 
+- (BOOL)any:(BKValidationBlock)block {
+	return [self match: block] != nil;
+}
+
+- (BOOL)none:(BKValidationBlock)block {
+	return [self match: block] == nil;
+}
+
+- (BOOL)all:(BKValidationBlock)block {
+	NSParameterAssert(block != nil);
+	
+    __block BOOL result = YES;
+    
+	[self enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+		if (!block(obj)) {
+			result = NO;
+			*stop = YES;
+		}
+	}];
+    
+    return result;
+}
+
 @end
+
+BK_MAKE_CATEGORY_LOADABLE(NSSet_BlocksKit)

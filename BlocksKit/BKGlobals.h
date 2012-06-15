@@ -31,6 +31,10 @@
 #endif
 #endif
 
+#ifndef BK_MAKE_CATEGORY_LOADABLE
+#define BK_MAKE_CATEGORY_LOADABLE(NAME) @interface FORCELOAD_##NAME @end @implementation FORCELOAD_##NAME @end
+#endif
+
 #if BK_HAS_APPKIT
 #import <Cocoa/Cocoa.h>
 #endif
@@ -45,12 +49,14 @@ typedef void (^BKTouchBlock)(NSSet* set, UIEvent* event);
 
 typedef void (^BKBlock)(void); // compatible with dispatch_block_t
 typedef void (^BKSenderBlock)(id sender);
+typedef void (^BKSenderKeyPathBlock)(id obj, NSString *keyPath);
+typedef void (^BKKeyValueBlock)(id key, id obj);
 typedef void (^BKIndexBlock)(NSUInteger index);
 typedef void (^BKTimerBlock)(NSTimeInterval time);
 typedef void (^BKResponseBlock)(NSURLResponse *response);
 
 typedef void (^BKObservationBlock)(id obj, NSDictionary *change);
-typedef void (^BKKeyValueBlock)(id key, id obj);
+typedef void (^BKMultipleObservationBlock)(id obj, NSString *keyPath, NSDictionary *change);
 
 typedef BOOL (^BKValidationBlock)(id obj);
 typedef BOOL (^BKKeyValueValidationBlock)(id key, id obj);

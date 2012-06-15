@@ -36,6 +36,17 @@
 	GHAssertEquals(_total,12,@"2*(1+2+3) = %d",_total);
 }
 
+- (void)testMatch {
+	BKKeyValueValidationBlock validationBlock = ^(id key,id value) {
+		_total += [value intValue] + [key intValue];
+		BOOL select = [value intValue] < 3 ? YES : NO;
+		return select;
+	};
+	NSDictionary *selected = [_subject match:validationBlock];
+	GHAssertEquals(_total,2,@"2*1 = %d",_total);
+	GHAssertEqualObjects(selected,[NSNumber numberWithInteger:1],@"selected value is %@",selected);
+}
+
 - (void)testSelect {
 	BKKeyValueValidationBlock validationBlock = ^(id key,id value) {
 		_total += [value intValue] + [key intValue];
@@ -60,7 +71,7 @@
 	};
 	NSDictionary *selected = [_subject select:validationBlock];
 	GHAssertEquals(_total,12,@"2*(1+2+3) = %d",_total);
-	GHAssertNil(selected,@"none item is selected");
+	GHAssertFalse(selected.count, @"none item is selected");
 }
 
 - (void)testReject {
@@ -86,7 +97,7 @@
 	};
 	NSDictionary *rejected = [_subject reject:validationBlock];
 	GHAssertEquals(_total,12,@"2*(1+2+3) = %d",_total);
-	GHAssertNil(rejected,@"all items are selected");
+	GHAssertFalse(rejected.count, @"all items are selected");
 }
 
 - (void)testMap {
@@ -103,6 +114,39 @@
 		nil
 	];
 	GHAssertEqualObjects(transformed,target,@"transformed dictionary is %@",transformed);
+}
+
+- (void)testAny {
+	BKKeyValueValidationBlock validationBlock = ^(id key,id value) {
+		_total += [value intValue] + [key intValue];
+		BOOL select = [value intValue] < 3 ? YES : NO;
+		return select;
+	};
+	BOOL isSelected = [_subject any: validationBlock];
+	GHAssertEquals(_total,2,@"2*1 = %d",_total);
+	GHAssertEquals(isSelected, YES, @"found selected value is %i", isSelected);	
+}
+
+- (void)testAll {
+	BKKeyValueValidationBlock validationBlock = ^(id key,id value) {
+		_total += [value intValue] + [key intValue];
+		BOOL select = [value intValue] < 4 ? YES : NO;
+		return select;
+	};
+	BOOL allSelected = [_subject all:validationBlock];
+	GHAssertEquals(_total,12,@"2*(1+2+3) = %d",_total);
+	GHAssertTrue(allSelected,@"all values matched test");
+}
+
+- (void)testNone {
+	BKKeyValueValidationBlock validationBlock = ^(id key,id value) {
+		_total += [value intValue] + [key intValue];
+		BOOL select = [value intValue] < 2 ? YES : NO;
+		return select;
+	};
+	BOOL noneSelected = [_subject all:validationBlock];
+	GHAssertEquals(_total,6,@"2*(1+2) = %d",_total);
+	GHAssertFalse(noneSelected,@"not all values matched test");
 }
 
 @end

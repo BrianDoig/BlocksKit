@@ -78,7 +78,7 @@
 	NSSet *found = [_subject select:validationBlock];
 
 	GHAssertEquals(_total,6,@"total length of \"122333\" is %d",_total);
-	GHAssertNil(found,@"no item is selected");
+	GHAssertFalse(found.count,@"no item is selected");
 }
 
 - (void)testReject {
@@ -103,7 +103,7 @@
 	NSSet *left = [_subject reject:validationBlock];
 
 	GHAssertEquals(_total,6,@"total length of \"122333\" is %d",_total);
-	GHAssertNil(left,@"all items are rejected");
+	GHAssertFalse(left.count,@"all items are rejected");
 }
 
 - (void)testMap {
@@ -124,6 +124,43 @@
 	};
 	NSString *concatenated = [_subject reduce:@"" withBlock:accumlationBlock];
 	GHAssertEqualStrings(concatenated,@"122333",@"concatenated string is %@",concatenated);
+}
+
+- (void)testAny {
+	BKValidationBlock validationBlock = ^(id obj) {
+		_total += [obj length];
+		BOOL match = ([obj intValue] == 22) ? YES : NO;
+		return match;
+	};
+	BOOL wasFound = [_subject any:validationBlock];
+	
+	// any: is functionally identical to select:, but will stop and return YES on the first match
+	GHAssertEquals(_total,3,@"total length of \"122\" is %d",_total);
+	GHAssertTrue(wasFound,@"matched object was found");
+}
+
+- (void)testAll {
+	BKValidationBlock validationBlock = ^(id obj) {
+		_total += [obj length];
+		BOOL match = ([obj intValue] < 444) ? YES : NO;
+		return match;
+	};
+	
+	BOOL allMatched = [_subject all: validationBlock];
+	GHAssertEquals(_total,6,@"total length of \"122333\" is %d",_total);
+	GHAssertTrue(allMatched, @"Not all values matched");
+}
+
+- (void)testNone {
+	BKValidationBlock validationBlock = ^(id obj) {
+		_total += [obj length];
+		BOOL match = ([obj intValue] < 1) ? YES : NO;
+		return match;
+	};
+	
+	BOOL noneMatched = [_subject none: validationBlock];
+	GHAssertEquals(_total,6,@"total length of \"122333\" is %d",_total);
+	GHAssertTrue(noneMatched, @"Some values matched");
 }
 
 @end

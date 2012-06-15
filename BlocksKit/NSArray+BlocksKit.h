@@ -111,4 +111,53 @@
  */
 - (id)reduce:(id)initial withBlock:(BKAccumulationBlock)block;
 
+/** Loops through an array to find whether any object matches the block.
+ 
+ This method is similar to the Scala list `exists`. It is functionally
+ identical to match: but returns a `BOOL` instead. It is not recommended
+ to use any: as a check condition before executing match:, since it would
+ require two loops through the array.
+ 
+ For example, you can find if a string in an array starts with a certain letter:
+
+	 NSString *letter = @"A";
+	 BOOL containsLetter = [stringArray any: ^(id obj) {
+	   return [obj hasPrefix: @"A"];
+	 }];
+
+ @param block A single-argument, BOOL-returning code block.
+ @return YES for the first time the block returns YES for an object, NO otherwise.
+ */
+- (BOOL)any:(BKValidationBlock)block;
+
+/** Loops through an array to find whether no objects match the block.
+ 
+ This selector performs *literally* the exact same function as all: but in reverse.
+ 
+ @param block A single-argument, BOOL-returning code block.
+ @return YES if the block returns NO for all objects in the array, NO otherwise.
+ */
+- (BOOL)none:(BKValidationBlock)block;
+
+/** Loops through an array to find whether all objects match the block.
+ 
+ @param block A single-argument, BOOL-returning code block.
+ @return YES if the block returns YES for all objects in the array, NO otherwise.
+ */
+- (BOOL) all: (BKValidationBlock)block;
+
+/** Tests whether every element of this array relates to the corresponding element of another array according to match by block.
+ 
+ For example, finding if a list of numbers corresponds to their sequenced string values;
+ NSArray *numbers = [NSArray arrayWithObjects: [NSNumber numberWithInt: 1], [NSNumber numberWithInt: 2], [NSNumber numberWithInt: 3], nil];
+ NSArray *letters = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
+ BOOL doesCorrespond = [numbers corresponds: letters withBlock: ^(id number, id letter) {
+    return [[number stringValue] isEqualToString: letter];
+ }];
+ 
+ @param block A two-argument, BOOL-returning code block.
+ @return Returns a BOOL, true if every element of array relates to corresponding element in another array.
+ */
+- (BOOL) corresponds: (NSArray *) list withBlock: (BKKeyValueValidationBlock) block;
+
 @end

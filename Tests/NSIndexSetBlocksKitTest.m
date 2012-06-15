@@ -16,11 +16,16 @@
 }
 
 - (void)tearDownClass {
-	[_target release];
+	[_subject release];
 }
 
 - (void)setUp {
 	_target = [[NSMutableArray alloc] initWithObjects:@"0",@"0",@"0",@"0",nil];
+}
+
+- (void)tearDown
+{
+	[_target release];
 }
 
 - (void)testEach {
@@ -111,6 +116,22 @@
 	NSIndexSet *found = [_subject reject:indexValidationBlock];
 	GHAssertEqualStrings(order,@"123",@"the index loop order is %@",order);
 	GHAssertEqualObjects(found,_subject,@"all indexes that are not rejected %@",found);
+}
+
+- (void)testAny {
+	__block NSMutableString *order = [NSMutableString string];
+	BKIndexValidationBlock indexValidationBlock = ^(NSUInteger index) {
+		[order appendFormat:@"%d",index];
+		BOOL match = NO;
+		if (index%2 == 0 ) {
+			[_target replaceObjectAtIndex:index withObject:[NSString stringWithFormat:@"%d",index]];
+			match = YES;
+		}
+		return match;
+	};
+	BOOL didFind = [_subject any: indexValidationBlock];
+	GHAssertEqualStrings(order,@"12",@"the index loop order is %@",order);
+	GHAssertTrue(didFind, @"result found in target array");
 }
 
 @end

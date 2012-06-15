@@ -73,4 +73,32 @@
  */
 - (NSIndexSet *)map:(BKIndexTransformBlock)block;
 
+/** Loops through an index set to find whether any of the indexes matche the block.
+ 
+ This method is similar to the Scala list `exists`. It is functionally
+ identical to match: but returns a `BOOL` instead. It is not recommended
+ to use any: as a check condition before executing match:, since it would
+ require two loops through the index set.
+ 
+ @param block A single-argument, BOOL-returning code block.
+ @return YES for the first time the block returns YES for an index, NO otherwise.
+ */
+- (BOOL)any:(BKIndexValidationBlock)block;
+
+/** Loops through an index set to find whether all objects match the block.
+ 
+ @param block A single-argument, BOOL-returning code block.
+ @return YES if the block returns YES for all indexes in the array, NO otherwise.
+ */
+- (BOOL)all:(BKIndexValidationBlock)block;
+
+/** Loops through an index set to find whether no objects match the block.
+ 
+ This selector performs *literally* the exact same function as all: but in reverse.
+ 
+ @param block A single-argument, BOOL-returning code block.
+ @return YES if the block returns NO for all indexes in the array, NO otherwise.
+ */
+- (BOOL)none:(BKIndexValidationBlock)block;
+
 @end
