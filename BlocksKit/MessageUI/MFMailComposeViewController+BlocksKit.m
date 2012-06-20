@@ -36,12 +36,12 @@
 
 @dynamic completionBlock;
 
-//+ (void)load {
-//	@autoreleasepool {
-//		[self registerDynamicDelegateNamed:@"mailComposeDelegate" forProtocol:@protocol(MFMailComposeViewControllerDelegate)];
-//		[self linkCategoryBlockProperty:@"completionBlock" withDelegateMethod:@selector(mailComposeController:didFinishWithResult:error:)];
-//	}
-//}
++ (void)load {
+	@autoreleasepool {
+		[self registerDynamicDelegateNamed:@"mailComposeDelegate" forProtocol:@protocol(MFMailComposeViewControllerDelegate)];
+		[self linkCategoryBlockProperty:@"completionBlock" withDelegateMethod:@selector(mailComposeController:didFinishWithResult:error:)];
+	}
+}
 
 @end
 
